@@ -2,22 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Infinite Rotating Images Using jQuery (JavaScript)</title>
+    <title>Test</title>
 <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=3.0.1'></script>    
-    <script type='text/javascript' src='infinite-rotator.js'></script>    
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <script $(window).load(function() { //start after HTML, images have loaded
+
+  var InfiniteRotator = 
+  {
+    init: function()
+    {
+      //initial fade-in time (in milliseconds)
+      var initialFadeIn = 1000;
+      
+      //interval between items (in milliseconds)
+      var itemInterval = 5000;
+      
+      //cross-fade time (in milliseconds)
+      var fadeTime = 2500;
+      
+      //count number of items
+      var numberOfItems = $('.rotating-item').length;
+
+      //set current item
+      var currentItem = 0;
+
+      //show first item
+      $('.rotating-item').eq(currentItem).fadeIn(initialFadeIn);
+
+      //loop through the items    
+      var infiniteLoop = setInterval(function(){
+        $('.rotating-item').eq(currentItem).fadeOut(fadeTime);
+
+        if(currentItem == numberOfItems -1){
+          currentItem = 0;
+        }else{
+          currentItem++;
+        }
+        $('.rotating-item').eq(currentItem).fadeIn(fadeTime);
+
+      }, itemInterval); 
+    } 
+  };
+
+  InfiniteRotator.init();
+  
+});></script> 
+    <style>#rotating-item-wrapper {
+  position: relative;
+  width: 980px;
+  height: 347px;
+}
+.rotating-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+</style>
   </head>
   <body>
-    <h1>Infinite Rotating Images Using jQuery (JavaScript)</h1>
-    <!-- START: Rotating Images -->
-		<div id="rotating-item-wrapper">
-			<img src="greenpeople.jpg" alt="a person entering a building" class="rotating-item" width="980" height="347" />
+  <div id="rotating-item-wrapper">
+      <img src="greenpeople.jpg" alt="a person entering a building" class="rotating-item" width="980" height="347" />
       <img src="entrance.jpg" alt="photo of building across from our office" class="rotating-item" width="980" height="347" />
       <img src="bluepeople.jpg" alt="building entrance with neon backlit walls" class="rotating-item" width="980" height="347" />
-      <img src="images/reflection3.jpg" alt="building lobby window reflections" class="rotating-item" width="980" height="347" />
-      <img src="images/reflection2.jpg" alt="reflection on building windows" class="rotating-item" width="980" height="347" />
-      <img src="images/manequine.jpg" alt="two manequines in window" class="rotating-item" width="980" height="347" />    
-		</div>
-		<!-- END: Rotating images images -->
+      <img src="reflection3.jpg" alt="building lobby window reflections" class="rotating-item" width="980" height="347" />
+      <img src="reflection2.jpg" alt="reflection on building windows" class="rotating-item" width="980" height="347" />
+      <img src="manequine.jpg" alt="two manequines in window" class="rotating-item" width="980" height="347" />    
+      <p style="display:none;">Source code and instructions at: <a href="http://trendmedia.com/news/infinite-rotating-images-using-jquery-javascript/">Infinite Loop: Rotating Images Using jQuery (JavaScript)</a><br/>by <a href="http://trendmedia.com/">San Francisco WordPress website designers and developers - TrendMedia</a></p>
+    </div>
+    <!-- END: Rotating images images -->
   </body>
 </html>
