@@ -72,18 +72,23 @@ body {font-family: Verdana,sans-serif;}
 }
 </style>
 <body>
+<h2>Automatic Slideshow</h2>
+<p>Change image every 2 seconds:</p>
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
+  <div class="numbertext"></div>
   <img src="entrance.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
+  <div class="numbertext"></div>
   <img src="bluepeople.jpg" style="width:100%">
 </div>
 
 <div class="mySlides fade">
+  <div class="numbertext"></div>
   <img src="greenpeople.jpg" style="width:100%">
 </div>
 
@@ -107,7 +112,7 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 10000); // Change image every 2 seconds
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
 
