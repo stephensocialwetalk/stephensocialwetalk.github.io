@@ -3,9 +3,10 @@
 <head>
   <title>Random Image</title>
   <script language="Javascript" type="text/javascript" src="script10.js"></script>  
-  <style>body {margin:0px padding:0px;} img {margin:0px padding:0px;}</style>
+  <style>body {margin:0px padding:0px;} outline {margin-left:0px padding-left:0px;margin-top:0px padding-top:0px;}</style>
 </head>
 <body>
+<div class="outline">
 <script type="text/javascript" margin="0px" padding="0px">
 var total_images = 2;
 var random_number = Math.floor((Math.random()*total_images));
@@ -14,5 +15,6 @@ random_img[0] = '<a href="http://smarturl.it/dpPPD"><img src="PPD.gif"></a>';
 random_img[1] = '<a href="http://smarturl.it/dpwys"><img src="wysdom.gif"></a>';
 document.write(random_img[random_number]);
 </script>
+</div>
 </body>
 </html>
