@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Random Image</title>
+  <script language="Javascript" type="text/javascript" src="script10.js"></script>  
+  <style type="text/css">
+<!--
+body {
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px
+}
+-->
+img {max-width:100%}
+</style>
+</head>
+<body>
+<div class="outline">
+<script type="text/javascript" margin="0px" padding="0px">
+var image = new Array ();
+image[0] = "<img src='PPD.gif'></a>";
+image[1] = "<img src='wysdom.gif'></a>"
+
+var link = new Array ();
+    link[0] = "<a href='https://smarturl.it/dpPPD'>";
+    link[1] = "<a href='https://smarturl.it/dpwys'>";
+
+var size = image.length;
+var x = Math.floor(size*Math.random());
+$('#ads').append(link[x]+image[x]);
+</script>
+</div>
+</body>
+</html>
