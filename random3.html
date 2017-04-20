@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Random Image</title>
+  <script language="Javascript" type="text/javascript" src="script10.js"></script>  
+  <style type="text/css">
+<!--
+body {
+ margin-top: 0px;
+ margin-right: 0px;
+ margin-bottom: 0px;
+ margin-left: 0px
+}
+-->
+img {max-width:100%}
+</style>
+</head>
+<body>
+<div class="outline">
+<script type="text/javascript" margin="0px" padding="0px">
+var total_images = 3;
+var random_number = Math.floor((Math.random()*total_images));
+var random_img = new Array();
+random_img[0] = '<a href="https://smarturl.it/dpPPD" target="_blank"><img src="PPD.gif"></a>';
+random_img[1] = '<a href="http://smarturl.it/dpDS" target="_blank"><img src="dentalsky.jpg"></a>';
+random_img[2] = '<a href="http://smarturl.it/dpGAD" target="_blank"><img src="greenapple.jpg"></a>';
+random_img[3] = '<a href="http://smarturl.it/dpMIS" target="_blank"><img src="mis.jpg"></a>';
+document.write(random_img[random_number]);
+</script>
+</div>
+</body>
+</html>
