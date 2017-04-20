@@ -12,22 +12,20 @@ body {
  margin-left: 0px
 }
 -->
+img {max-width:100%}
 </style>
 </head>
 <body>
 <div class="outline">
 <script type="text/javascript" margin="0px" padding="0px">
-var image = new Array ();
-image[0] = "<img src='PPD.gif'></a>";
-image[1] = "<img src='wysdom.gif'></a>"
-
-var link = new Array ();
-    link[0] = "<a href='https://smarturl.it/dpPPD'>";
-    link[1] = "<a href='https://smarturl.it/dpwys'>";
-
-var size = image.length;
-var x = Math.floor(size*Math.random());
-$('#ads').append(link[x]+image[x]);
+var total_images = 3;
+var random_number = Math.floor((Math.random()*total_images));
+var random_img = new Array();
+random_img[0] = '<a href="https://smarturl.it/dpPPD" target="_blank"><img src="PPD.gif"></a>';
+random_img[1] = '<a href="http://smarturl.it/dpDS" target="_blank"><img src="dentalsky.jpg"></a>';
+random_img[2] = '<a href="http://smarturl.it/dpGAD" target="_blank"><img src="greenapple.jpg"></a>';
+random_img[3] = '<a href="http://smarturl.it/dpMIS" target="_blank"><img src="mis.jpg"></a>';
+document.write(random_img[random_number]);
 </script>
 </div>
 </body>
