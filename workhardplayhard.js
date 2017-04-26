@@ -102,7 +102,7 @@ var utils = {
 
 canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
-W = canvas.width = (2800)
+W = canvas.width = (2100)
 H = canvas.height = (250);
 
 gridX = 5;
