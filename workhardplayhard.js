@@ -102,8 +102,8 @@ var utils = {
 
 canvas = document.getElementById("canvas");
 var ctx = canvas.getContext('2d');
-W = canvas.width = (500)
-H = canvas.height = (500);
+W = canvas.width = (700)
+H = canvas.height = (250);
 
 gridX = 5;
 gridY = 5;
@@ -111,7 +111,7 @@ gridY = 5;
 function shape(x, y, texte) {
   this.x = x;
   this.y = y;
-  this.size = 100;
+  this.size = 80;
 
   this.text = texte;
   this.placement = [];
